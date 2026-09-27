@@ -1,0 +1,5 @@
+SV001|hungcuiga1|cheating_001|8.5
+SV002|hehecuiga1|cheating_001|7.2
+SV003|dogcuiga1|cheating_001|9.1
+SV004|hihicuiga1|cheating_001|6.8
+SV005|huhucuiga1|cheating_001|5.0
