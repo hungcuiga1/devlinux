@@ -16,7 +16,7 @@ static char *trim(char *s)
 {
     while (*s == ' ' || *s == '\t') s++;
     size_t len = strlen(s);
-    while (len > 0 && (s[len  1] == '\n' || s[len  1] == '\r' || s[len  1] == ' '  || s[len  1] == '\t')) {
+    while (len > 0 && (s[len - 1] == '\n' || s[len - 1] == '\r' || s[len - 1] == ' ' || s[len - 1] == '\t')) {
         s[--len] = '\0';
     }
     return s;
