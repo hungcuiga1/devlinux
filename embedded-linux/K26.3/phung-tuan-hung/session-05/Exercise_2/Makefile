@@ -1,16 +1,14 @@
 CC      := gcc
-CFLAGS  := -Wall -Wextra -Werror -std=c11 -D_DEFAULT_SOURCE -O2
-BINS    := manager searcher
+CFLAGS  := -Wall -Wextra -Werror -std=c11 -D_DEFAULT_SOURCE -O2 -pthread
+LDFLAGS := -pthread
+TARGET  := print_queue
 
 .PHONY: all clean
 
-all: $(BINS)
+all: $(TARGET)
 
-manager: manager.c
-	$(CC) $(CFLAGS) -o $@ $<
-
-searcher: searcher.c
-	$(CC) $(CFLAGS) -o $@ $<
+$(TARGET): print_queue.c
+	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
 
 clean:
-	rm -f $(BINS)
+	rm -f $(TARGET)
